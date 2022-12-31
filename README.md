@@ -1,8 +1,8 @@
 # Rickroll
 A website with the auto-playing song "Never Gonna Give You Up" that can be used to rickroll your friends.
 
-# Current Rickrolls: 66,522
-### (Last checked on 10/26/22)
+# Current Rickrolls: 78,378
+### (Last checked on 12/31/22)
 
 **Find it here: https://rebrand.ly/r1ckr0l13r**
 
