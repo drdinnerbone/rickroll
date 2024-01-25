@@ -12,8 +12,6 @@
          // Change the variables below to your liking
          const currentURL = "Rick Astley - Never Gonna Give You Up -Official Music Video-.mp4";
          const pageTitle = "Loading...";
-         const rickrolledText = "You've been Rickroll'd!";
-         const textSize = "2em"; // You can adjust the text size
          // End of changable variables
          
          function setTitle() {
@@ -24,26 +22,12 @@
             window.location.href = currentURL;
          }
          
-         function showRickrolledText() {
-            const textElement = document.createElement('div');
-            textElement.innerText = rickrolledText;
-            textElement.style.position = 'fixed';
-            textElement.style.top = '0';
-            textElement.style.left = '50%';
-            textElement.style.transform = 'translateX(-50%)';
-            textElement.style.fontSize = textSize;
-            textElement.style.color = '#ff0000'; // Red color
-            textElement.style.fontWeight = 'bold';
-            document.body.appendChild(textElement);
-         }
-
          function onload() {
             setTitle();
             redirect();
-            showRickrolledText();
          }
          
-         window.onload = onload;
+         window.onload = onload();
        </script>
    </body>
 </html>
