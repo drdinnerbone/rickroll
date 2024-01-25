@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
    <body>
-       <video autoplay loop width="100%">
-
-    <source src="Rick Astley - Never Gonna Give You Up -Official Music Video-.mp4"
-            type="video/mp4">
-
-    Sorry, your browser doesn't support embedded videos.
-</video>
-      <script>
+       <video width="100%" controls>
+           <source src="Rick Astley - Never Gonna Give You Up -Official Music Video-.mp4" type="video/mp4">
+           Sorry, your browser doesn't support embedded videos.
+       </video>
+       <script>
          // Change the variables below to your liking
          const currentURL = "Rick Astley - Never Gonna Give You Up -Official Music Video-.mp4";
          const pageTitle = "Loading...";
@@ -22,12 +19,15 @@
             window.location.href = currentURL;
          }
          
-         function onload() {
+         function onLoad() {
             setTitle();
-            redirect();
+            // Redirect only if there is no autoplay issue
+            if (document.querySelector('video').canPlayType('video/mp4') !== '') {
+               redirect();
+            }
          }
          
-         window.onload = onload();
+         window.onload = onLoad;
        </script>
    </body>
 </html>
