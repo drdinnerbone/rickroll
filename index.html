@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
    <body>
-       <video width="100%" controls>
+       <div style="text-align: center;">
+           <button style="font-size: 24px; color: red;" onclick="playVideo()">Don't Click Me</button>
+       </div>
+
+       <video id="myVideo" width="100%" controls>
            <source src="Rick Astley - Never Gonna Give You Up -Official Music Video-.mp4" type="video/mp4">
            Sorry, your browser doesn't support embedded videos.
        </video>
+
        <script>
          // Change the variables below to your liking
          const currentURL = "Rick Astley - Never Gonna Give You Up -Official Music Video-.mp4";
          const pageTitle = "Loading...";
          // End of changable variables
-         
+
          function setTitle() {
             document.title = pageTitle;
          }
-         
+
          function redirect() {
             window.location.href = currentURL;
          }
-         
+
          function onLoad() {
             setTitle();
             // Redirect only if there is no autoplay issue
@@ -26,7 +31,14 @@
                redirect();
             }
          }
-         
+
+         function playVideo() {
+            // Play the video and hide the button
+            const video = document.getElementById('myVideo');
+            video.play();
+            document.querySelector('button').style.display = 'none';
+         }
+
          window.onload = onLoad;
        </script>
    </body>
